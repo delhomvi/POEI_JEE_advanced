@@ -30,6 +30,12 @@ h1 {
 			<h:commandButton action="page2" value="register" />
 		</h:form>
 	</div>
+	<div>
+		<h:form>
+			<h:outputText value="#{User.page}" />
+			<h:commandButton action="#{User.nextPage()}" value="nextPage" />
+		</h:form>
+	</div>
 
 </body>
 </html>
