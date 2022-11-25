@@ -14,6 +14,7 @@ public class IMC {
 	private int taille;
 	private int poids;
 	private String conseils;
+	private int imcIndex;
 
 	// Constructeurs
 	public IMC() {
@@ -85,16 +86,32 @@ public class IMC {
 		this.conseils = conseils;
 	}
 
+	public int getImcIndex() {
+		return imcIndex;
+	}
+
+	public void setImcIndex(int imcIndex) {
+		this.imcIndex = imcIndex;
+	}
+
 	// Autres fonctions
 	public String conseils() {
-		Double IMCvalue = (double) this.poids / (this.taille * this.taille/100/100);
+		Double IMCvalue = (double) this.poids / (this.taille * this.taille / 100 / 100);
 		if (IMCvalue <= 18.5) {
+			imcIndex = 1;
 			return "Conseil 1";
 		}
 		if (IMCvalue >= 25) {
+			imcIndex = 2;
 			return "Conseil 2";
 		} else {
+			imcIndex = 3;
 			return "conseil 3";
 		}
 	}
+	
+	public int nextPage() { 
+		return imcIndex; 
+	}
+
 }
