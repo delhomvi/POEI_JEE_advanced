@@ -16,8 +16,13 @@ public class Main {
 		} catch (Exception e) {
 			trx.rollback();
 		}
+		session.close();
 	}
 	public static void main(String[] args) {
-		addPerso(new User("Didier","Drogba",50));
+		addPerso(new User("Paul","Pogba",50));
+		addPerso(new User("Didier","Deschamps",50));
+		addPerso(new User("Zidane","Zinedine",50));
+		addPerso(new User("Olivier","Giroud",50));
+		addPerso(new User("Lionel","Messi",50));
 	}
 }
