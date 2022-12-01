@@ -1,8 +1,8 @@
 package cours.spring;
 
-import org.springframework.stereotype.Component;
 
 @Component
+@Scope()
 public class Bowser {
 	
 	private Gun obj;
